@@ -28,6 +28,8 @@ export const PermissionsProvider = ({children}: any) => {
   const [permissions, setPermissions] = useState(permissionInitState);
 
   useEffect(() => {
+    checkLocationsPermission();
+
     AppState.addEventListener('change', state => {
       if (state !== 'active') return;
 
