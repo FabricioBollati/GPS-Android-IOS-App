@@ -10,7 +10,6 @@ export const LoadingScreen = () => {
         alignItems: 'center',
       }}>
       <ActivityIndicator size={50} color="black" />
-
       <Text>Cargando...</Text>
     </View>
   );

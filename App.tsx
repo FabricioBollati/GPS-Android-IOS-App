@@ -4,12 +4,15 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {NavigationContainer} from '@react-navigation/native';
 import {Navigator} from './src/navigator/Navigator';
 import {PermissionsProvider} from './src/context/PermissionsContext';
+import {enableLatestRenderer} from 'react-native-maps';
 
 const AppState = ({children}: any) => {
   return <PermissionsProvider>{children}</PermissionsProvider>;
 };
 
 const App = () => {
+  enableLatestRenderer();
+
   return (
     <NavigationContainer>
       <AppState>
